@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>D:\cocos2d-x\cocos2d-x-2.2.2\projects\HShooting\HShootingUI\HShootingUi</ProjectDir>
+  <Version>1.6.0.0</Version>
+  <Resources>D:\cocos2d-x\cocos2d-x-2.2.2\projects\HShooting\HShootingUI\HShootingUi\Resources</Resources>
+  <Name>HShootingUi</Name>
+  <JsonFileName>HShootingUi.json</JsonFileName>
+  <JsonFolder>D:\cocos2d-x\cocos2d-x-2.2.2\projects\HShooting\HShootingUI\HShootingUi\Json</JsonFolder>
+  <JsonList>
+    <string>HShootingUi_1.json</string>
+    <string>HShootingUi_2.json</string>
+  </JsonList>
+  <CanvasSize>
+    <Width>800</Width>
+    <Height>480</Height>
+  </CanvasSize>
+  <filePath>D:\cocos2d-x\cocos2d-x-2.2.2\projects\HShooting\HShootingUI\HShootingUi\HShootingUi.xml.ui</filePath>
+  <ProjectType>UIProject</ProjectType>
+  <ResRelativePath />
+  <imageFileList>
+    <string>HShootingUi0.plist</string>
+    <string>HShootingUi1.plist</string>
+  </imageFileList>
+  <imagePngList>
+    <string>HShootingUi0.png</string>
+    <string>HShootingUi1.png</string>
+    <string>HShootingUi0.png</string>
+    <string>HShootingUi1.png</string>
+  </imagePngList>
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson>HShootingUi_1.json</CurrentUIJson>
+</UIProject>

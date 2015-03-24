@@ -190,6 +190,27 @@ bool GameScene::init(int nChooper)
 		//×¢²áUpdateº¯Êý
 		this->schedule(schedule_selector(GameScene::OnPreFrameUpdate));
 
+		//TODO:FileSystem Test
+		//FileSystem::setHighScore(DATA_HIGHSCORE, "90000");
+		//FileSystem::getHighScore(DATA_HIGHSCORE);
+
+		//FileSystem::setLevel(DATA_LEVEL, "1000");
+		//FileSystem::getLevel(DATA_LEVEL);
+
+		//FileSystem::setCoins(DATA_COINS, "1456");
+		//FileSystem::getCoins(DATA_COINS);
+
+		//FileSystem::setIsScore(DATA_ISSCORE, "578");
+		//FileSystem::getIsScore(DATA_ISSCORE);
+
+		//CCLabelTTF* pTest = CCLabelTTF::create("test", "Comic Sans MS", 15);
+		//CC_BREAK_IF(pTest == NULL);
+		//pTest->setColor(ccc3(100, 255, 0));
+		//pTest->setAnchorPoint(ccp(0, 0.5));
+		//pTest->setPosition(ccp(_SCREEN_WIDTH_ / 2 + 15.f, _SCREEN_HEIGHT_ - 10.f));
+		//pTest->setString(GetStringFromInt(FileSystem::getIsScore(DATA_ISSCORE)));
+		//addChild(pTest, enZOrderBtn, enTagScore);
+
 		bRet = true;
 		return bRet;
 	} while (0);
