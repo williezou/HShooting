@@ -12,7 +12,7 @@ FileSystem::~FileSystem()
 int FileSystem::getHighScore()
 {
 	int score = 0;
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "HighScore:%d");
 	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
 	{
@@ -27,7 +27,7 @@ int FileSystem::getHighScore()
 
 void FileSystem::setHighScore(int i)
 {
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "HighScore:%d");
 	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
 	CCUserDefault::sharedUserDefault()->flush();
@@ -36,7 +36,7 @@ void FileSystem::setHighScore(int i)
 int FileSystem::getLevel()
 {
 	int level = 0;
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "Level:%d");
 	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
 	{
@@ -51,7 +51,7 @@ int FileSystem::getLevel()
 
 void FileSystem::setLevel(int i)
 {
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "Level:%d");
 	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
 	CCUserDefault::sharedUserDefault()->flush();
@@ -60,7 +60,7 @@ void FileSystem::setLevel(int i)
 int FileSystem::getCoins()
 {
 	int coins = 0;
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "Level:%d");
 	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
 	{
@@ -75,7 +75,7 @@ int FileSystem::getCoins()
 
 void FileSystem::setCoins(int i)
 {
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "Coins:%d");
 	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
 	CCUserDefault::sharedUserDefault()->flush();
@@ -85,7 +85,7 @@ int FileSystem::getIsScore()
 {
 	int score = 0;
 
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "isScore");
 	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
 	{
@@ -100,7 +100,7 @@ int FileSystem::getIsScore()
 
 void FileSystem::setIsScore(int i)
 {
-	char* pCharBuf = NULL;
+	char pCharBuf[1024 * 10];
 	sprintf(pCharBuf, "isScore");
 	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
 	CCUserDefault::sharedUserDefault()->flush();
