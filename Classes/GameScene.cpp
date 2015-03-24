@@ -7,6 +7,7 @@
 #include "Enemy.h"
 #include "EnemyManager.h"
 #include "SimpleAudioEngine.h"
+#include "FileSystem.h"
 
 using namespace CocosDenshion;
 

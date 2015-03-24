@@ -9,34 +9,35 @@ FileSystem::~FileSystem()
 {
 }
 
-int FileSystem::getHighScore(int type)
+int FileSystem::getHighScore()
 {
 	int score = 0;
-	CCString* pStrBuf = NULL;
-	pStrBuf = CCString::createWithFormat("highScore:%d", type);
-	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey((char*)pStrBuf))
+	char* pCharBuf = NULL;
+	sprintf(pCharBuf, "HighScore:%d");
+	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
 	{
-		CCUserDefault::sharedUserDefault()->setIntegerForKey((char*)pStrBuf, 0);
+		CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, 0);
 	}
 	else
 	{
-		score = CCUserDefault::sharedUserDefault()->getIntegerForKey((char*)pStrBuf);
+		score = CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf);
 	}
 	return score;
 }
 
-void FileSystem::setHighScore(int type, int i)
+void FileSystem::setHighScore(int i)
 {
-	CCString* pStrBuf = NULL;
-	pStrBuf = CCString::createWithFormat("highScore:%d", type);
-	CCUserDefault::sharedUserDefault()->setIntegerForKey((char*)pStrBuf, i);
+	char* pCharBuf = NULL;
+	sprintf(pCharBuf, "HighScore:%d");
+	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
+	CCUserDefault::sharedUserDefault()->flush();
 }
 
-int FileSystem::getLevel(int type)
+int FileSystem::getLevel()
 {
 	int level = 0;
 	char* pCharBuf = NULL;
-	sprintf(pCharBuf, "highScore:%d", type);
+	sprintf(pCharBuf, "Level:%d");
 	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
 	{
 		CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, 0);
@@ -48,28 +49,60 @@ int FileSystem::getLevel(int type)
 	return level;
 }
 
-void FileSystem::setLevel(int type)
+void FileSystem::setLevel(int i)
 {
-
+	char* pCharBuf = NULL;
+	sprintf(pCharBuf, "Level:%d");
+	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
+	CCUserDefault::sharedUserDefault()->flush();
 }
 
 int FileSystem::getCoins()
 {
-	return 0;
+	int coins = 0;
+	char* pCharBuf = NULL;
+	sprintf(pCharBuf, "Level:%d");
+	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
+	{
+		CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, 0);
+	}
+	else
+	{
+		coins = CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf);
+	}
+	return coins;
 }
 
 void FileSystem::setCoins(int i)
 {
-
+	char* pCharBuf = NULL;
+	sprintf(pCharBuf, "Coins:%d");
+	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
+	CCUserDefault::sharedUserDefault()->flush();
 }
 
 int FileSystem::getIsScore()
 {
-	return 0;
+	int score = 0;
+
+	char* pCharBuf = NULL;
+	sprintf(pCharBuf, "isScore");
+	if (!CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf))
+	{
+		CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, 0);
+	}
+	else
+	{
+		score = CCUserDefault::sharedUserDefault()->getIntegerForKey(pCharBuf);
+	}
+	return score;
 }
 
-void FileSystem::setIsScore()
+void FileSystem::setIsScore(int i)
 {
-
+	char* pCharBuf = NULL;
+	sprintf(pCharBuf, "isScore");
+	CCUserDefault::sharedUserDefault()->setIntegerForKey(pCharBuf, i);
+	CCUserDefault::sharedUserDefault()->flush();
 }
 

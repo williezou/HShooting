@@ -11,17 +11,17 @@ public:
 	FileSystem();
 	~FileSystem();
 
-	static int getHighScore(int type);
-	static void setHighScore(int type, int i);
+	static int getHighScore();
+	static void setHighScore(int i);
 
-	static int getLevel(int type);
-	static void setLevel(int type);
+	static int getLevel();
+	static void setLevel(int i);
 
 	static int getCoins();
 	static void setCoins(int i);
 
 	static int getIsScore();
-	static void setIsScore();
+	static void setIsScore(int i);
 
 private:
 
